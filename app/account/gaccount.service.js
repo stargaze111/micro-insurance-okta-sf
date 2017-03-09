@@ -38,7 +38,7 @@ var GAuthenticationService = (function () {
             .catch(this.handleError);
     };
     GAuthenticationService.prototype.login = function (loginUserModel, clientId, callBackPath) {
-        var tokenUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/gauth/login';
+        var tokenUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/gauth/login';
         var loginModel = { "username": "", "passcode": "" };
         loginModel.username = loginUserModel.username;
         loginModel.passcode = loginUserModel.passcode;
@@ -46,7 +46,7 @@ var GAuthenticationService = (function () {
     };
     GAuthenticationService.prototype.register = function (registerUserModel, clientId, callBackPath) {
         var _this = this;
-        var registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+        var registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
         registerUserModel.email = registerUserModel.username;
         this.postRequest(registerUserModel, clientId, registerUrl).subscribe(function (response) {
             console.log(response);

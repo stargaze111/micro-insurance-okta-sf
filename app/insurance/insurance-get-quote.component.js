@@ -20,7 +20,7 @@ var InsuranceGetQouteComponent = (function () {
         this.clientId = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
         this.policyModel = new post_policy_model_1.PostPolicyModel('', '');
         this.stage = 1; // 1-Get Qoute, 2-Purchase policy, 3-Confirm
-        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
         this.createPolicyPath = 'policy/create';
         this.createQuotePath = 'quote/create';
         this.randomQuoteService = new simulator_random_quote_component_1.SimulatorRandomQuoteComponent();
@@ -34,6 +34,7 @@ var InsuranceGetQouteComponent = (function () {
             console.log('Policy id:', data.data.quoteId);
             _this.policyModel.quoteId = data.data.quoteId;
             _this.policyModel.quote_uuid = data.data.quote_uuid;
+            _this.policyModel.leadId = data.data.leadId;
             _this.policyAmount = data.data.amount;
             _this.stage = 2;
         });

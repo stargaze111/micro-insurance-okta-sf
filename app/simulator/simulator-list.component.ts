@@ -15,7 +15,7 @@ export class SimulatorListComponent {
     pageTitle: string = 'List';
     // transactions: IReturnTransactionModel[];
     clientId: string = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
-    private baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+    private baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
     private transactions: IReturnTransactionModel[];
     private insuranceTypeSummery: IReturnInsuranceTypeSummeryModel[];
 

@@ -38,7 +38,7 @@ var RegisterComponent = (function () {
                 if (_this.token.length != 0) {
                     console.log("SUCCESS length:" + _this.token.length);
                     localStorage.setItem("sms_access_token", _this.token);
-                    _this.router.navigate('/register');
+                    _this.router.navigate(['/register']);
                     _this.isAuthenticated = true;
                 }
                 console.log('step2');
@@ -52,7 +52,7 @@ var RegisterComponent = (function () {
     };
     RegisterComponent.prototype.register = function (registerUserModel, clientId, callBackPath) {
         var _this = this;
-        var registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+        var registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
         registerUserModel.email = registerUserModel.username;
         this.authService.postRequest(registerUserModel, clientId, registerUrl).subscribe(function (response) {
             console.log(response);

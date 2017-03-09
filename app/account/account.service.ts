@@ -41,13 +41,13 @@ export class AuthenticationService {
     }
 
     login(loginUserModel: LoginUserModel, clientId: string, callBackPath: string) {
-             let tokenUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/login';
+             let tokenUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/login';
          this.error = "";  
         return this.postRequest(loginUserModel, clientId, tokenUrl);        
     }
 
     register(registerUserModel: RegisterUserModel, clientId: string) {
-          let registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+          let registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
         this.error = "";  
         registerUserModel.email = registerUserModel.username;
 

@@ -2,8 +2,9 @@ export class PostPolicyModel {
 
   constructor(
     public quoteId: string,
-    public quote_uuid:string
-
+    public quote_uuid:string,
+    public leadId : string,
+    public simulated : string
   ) {  }
 
 }

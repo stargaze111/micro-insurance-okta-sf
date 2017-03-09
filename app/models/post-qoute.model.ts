@@ -10,7 +10,8 @@ export class PostQouteModel {
     public firstName:string,
     public lastName:string,
     public email:string,
-    public mobile:string
+    public mobile:string,
+    public simulated : string    
   ) {  }
 }
 /*

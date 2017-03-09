@@ -1,6 +1,6 @@
 "use strict";
 var PostQouteModel = (function () {
-    function PostQouteModel(insuranceType, gender, age, fromDestination, toDestination, company, firstName, lastName, email, mobile) {
+    function PostQouteModel(insuranceType, gender, age, fromDestination, toDestination, company, firstName, lastName, email, mobile, simulated) {
         this.insuranceType = insuranceType;
         this.gender = gender;
         this.age = age;
@@ -11,6 +11,7 @@ var PostQouteModel = (function () {
         this.lastName = lastName;
         this.email = email;
         this.mobile = mobile;
+        this.simulated = simulated;
     }
     return PostQouteModel;
 }());

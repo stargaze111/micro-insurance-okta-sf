@@ -26,7 +26,7 @@ export class SimulatorComponent {
     summeryModel: PostSummeryModel = new PostSummeryModel('Car Insurance', false, 20);
     returnSummeryModel: ReturnSummeryModel = new ReturnSummeryModel('', '', '');
     clientId: string = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
-    private baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+    private baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
     private createPolicyPath = 'policy/create';
     private createQuotePath = 'quote/create';
 
@@ -48,6 +48,7 @@ export class SimulatorComponent {
 
     constructor(private _qouteService: QouteService) {
         this.model = this.randomQuoteService.getRandomQoute();
+        this.model.simulated = 'Y';
     }
 
     submitQoute(form: NgForm) {
@@ -58,6 +59,8 @@ export class SimulatorComponent {
                 console.log('Policy id:', data.data.quoteId)
                 this.policyModel.quoteId = data.data.quoteId;
                 this.policyModel.quote_uuid = data.data.quote_uuid;
+                this.policyModel.leadId = data.data.leadId;
+                this.policyModel.simulated = 'Y';
                 this.stage = 2;
             }
             )
@@ -100,6 +103,8 @@ export class SimulatorComponent {
                 let createPolicyPath = 'policy/create';
                 this.policyModel.quoteId = data.data.quoteId;
                 this.policyModel.quote_uuid = data.data.quote_uuid;
+                this.policyModel.leadId = data.data.leadId;
+                this.policyModel.simulated = "Y";
                 this.policyAmount = data.data.amount;
                 this.countQuotes++;
                 this.stage = 2;

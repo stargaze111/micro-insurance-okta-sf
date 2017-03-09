@@ -24,7 +24,7 @@ export class InsuranceGetQouteComponent{
      policyAmount: string; // for stage 2 
      policyId: string; //for stage 3
  
-    private baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+    private baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
     private createPolicyPath = 'policy/create';
     private createQuotePath = 'quote/create';
 
@@ -44,6 +44,7 @@ export class InsuranceGetQouteComponent{
                 console.log('Policy id:', data.data.quoteId)
                 this.policyModel.quoteId = data.data.quoteId;
                 this.policyModel.quote_uuid = data.data.quote_uuid;
+                this.policyModel.leadId = data.data.leadId;
                 this.policyAmount = data.data.amount;
                 this.stage=2;
             }

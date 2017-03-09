@@ -20,7 +20,7 @@ var GAuthenticationService = (function () {
     function GAuthenticationService(http, router) {
         this.http = http;
         this.router = router;
-        this._tokenUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/gauth/login';
+        this._tokenUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/gauth/login';
         this.loggedIn = false;
         this.token = '';
         this.error = "";

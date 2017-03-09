@@ -18,7 +18,7 @@ require('rxjs/Rx');
 var QouteService = (function () {
     function QouteService(_http) {
         this._http = _http;
-        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
     }
     QouteService.prototype.postRequest = function (postModel, clientId, url) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json',

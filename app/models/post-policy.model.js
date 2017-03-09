@@ -1,8 +1,10 @@
 "use strict";
 var PostPolicyModel = (function () {
-    function PostPolicyModel(quoteId, quote_uuid) {
+    function PostPolicyModel(quoteId, quote_uuid, leadId, simulated) {
         this.quoteId = quoteId;
         this.quote_uuid = quote_uuid;
+        this.leadId = leadId;
+        this.simulated = simulated;
     }
     return PostPolicyModel;
 }());

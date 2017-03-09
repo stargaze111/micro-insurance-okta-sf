@@ -13,7 +13,7 @@ var post_qoute_model_1 = require('../models/post-qoute.model');
 var SimulatorRandomQuoteComponent = (function () {
     function SimulatorRandomQuoteComponent() {
         this.insuranceTypes = ['Ride Sharing', 'Food Delivery', 'Rental Car', 'Holiday Travel'];
-        this.genders = ['Male', 'Female'];
+        this.genders = ['Male', 'Male', 'Male', 'Male', 'Female', 'Female', 'Female', 'Female'];
         this.ages = ['18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33'];
         this.firstNames = ['John', 'Jack', 'Tony', 'Peter', 'Kevin', 'Anthony', 'James', 'Shaun', 'Rick', 'Mark', 'Spike', 'Craig', 'Mickey', 'Ram', 'Jason', 'Andrew'];
         this.lastNames = ['Smith', 'Reacher', 'Stark', 'Parker', 'Spacey', 'Hopkins', 'Ruse', 'Pollock', 'Roll', 'Spencer', 'Jones', 'Hatter', 'Mouse', 'Mendes', 'Bourne', 'Blake'];

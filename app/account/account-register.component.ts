@@ -65,7 +65,7 @@ export class RegisterComponent{
     }
 
       register(registerUserModel: RegisterUserModel, clientId: string, callBackPath: string) {
-          let registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+          let registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
 
         registerUserModel.email = registerUserModel.username;
         

@@ -38,12 +38,12 @@ var AuthenticationService = (function () {
             .catch(this.handleError);
     };
     AuthenticationService.prototype.login = function (loginUserModel, clientId, callBackPath) {
-        var tokenUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/login';
+        var tokenUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/login';
         this.error = "";
         return this.postRequest(loginUserModel, clientId, tokenUrl);
     };
     AuthenticationService.prototype.register = function (registerUserModel, clientId) {
-        var registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+        var registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
         this.error = "";
         registerUserModel.email = registerUserModel.username;
         return this.postRequest(registerUserModel, clientId, registerUrl);

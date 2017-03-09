@@ -21,7 +21,7 @@ var SearchInsuranceTransactionsService = (function () {
         this.http = http;
         this.client_id = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
         // private instance variable to hold base url
-        this.transactionsUrl = 'https://smsapigee-test.apigee.net/v3/insurance/transactions/search';
+        this.transactionsUrl = 'https://smsapigee-test.apigee.net/v5/insurance/transactions/search';
     }
     SearchInsuranceTransactionsService.prototype.searchTransactions = function (fromMilliseconds, toMilliseconds, selectedInsurance, selectedCompany, exeId) {
         var headers = new http_1.Headers({ 'Content-Type': 'application/json', 'client_id': this.client_id });

@@ -17,7 +17,7 @@ var SimulatorListComponent = (function () {
         this.pageTitle = 'List';
         // transactions: IReturnTransactionModel[];
         this.clientId = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
-        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
         this.queryTransactions();
     }
     SimulatorListComponent.prototype.queryTransactions = function () {

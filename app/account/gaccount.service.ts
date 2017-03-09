@@ -41,7 +41,7 @@ export class GAuthenticationService {
     }
 
     login(loginUserModel: LoginUserModel, clientId: string, callBackPath: string) {
-             let tokenUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/gauth/login';
+             let tokenUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/gauth/login';
 	     let loginModel = {"username":"","passcode":""};
 	     loginModel.username = loginUserModel.username;
 	     loginModel.passcode = loginUserModel.passcode;
@@ -50,7 +50,7 @@ export class GAuthenticationService {
     }
 
     register(registerUserModel: RegisterUserModel, clientId: string, callBackPath: string) {
-          let registerUrl = 'https://smsapigee-test.apigee.net/v4/insurance/staff/register';
+          let registerUrl = 'https://smsapigee-test.apigee.net/v5/insurance/staff/register';
 
         registerUserModel.email = registerUserModel.username;
 

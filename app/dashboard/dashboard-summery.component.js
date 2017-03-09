@@ -19,7 +19,7 @@ var DashboardSummeryComponent = (function () {
         this.authService = authService;
         this.pageTitle = 'Admin Summery';
         this.clientId = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
-        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
         this.busyLoading = true;
         this.tab = 'types';
         //this.queryTransactions()

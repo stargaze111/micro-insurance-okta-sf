@@ -25,7 +25,7 @@ var SimulatorComponent = (function () {
         this.summeryModel = new post_summery_model_1.PostSummeryModel('Car Insurance', false, 20);
         this.returnSummeryModel = new return_summery_model_1.ReturnSummeryModel('', '', '');
         this.clientId = 'UMPB1q9XBKudOD58cyVYACOp22a5OjgY';
-        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v3/insurance/';
+        this.baseApiUrl = 'https://smsapigee-test.apigee.net/v5/insurance/';
         this.createPolicyPath = 'policy/create';
         this.createQuotePath = 'quote/create';
         this.transactions = {};
@@ -34,6 +34,7 @@ var SimulatorComponent = (function () {
         this.stage = 1; // 1-Get Qoute, 2-Purchase policy, 3-Confirm
         this.randomQuoteService = new simulator_random_quote_component_1.SimulatorRandomQuoteComponent();
         this.model = this.randomQuoteService.getRandomQoute();
+        this.model.simulated = 'Y';
     }
     SimulatorComponent.prototype.submitQoute = function (form) {
         var _this = this;
@@ -43,6 +44,8 @@ var SimulatorComponent = (function () {
             console.log('Policy id:', data.data.quoteId);
             _this.policyModel.quoteId = data.data.quoteId;
             _this.policyModel.quote_uuid = data.data.quote_uuid;
+            _this.policyModel.leadId = data.data.leadId;
+            _this.policyModel.simulated = 'Y';
             _this.stage = 2;
         });
     };
@@ -77,6 +80,8 @@ var SimulatorComponent = (function () {
             var createPolicyPath = 'policy/create';
             _this.policyModel.quoteId = data.data.quoteId;
             _this.policyModel.quote_uuid = data.data.quote_uuid;
+            _this.policyModel.leadId = data.data.leadId;
+            _this.policyModel.simulated = "Y";
             _this.policyAmount = data.data.amount;
             _this.countQuotes++;
             _this.stage = 2;
