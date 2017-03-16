@@ -166,7 +166,6 @@ pieChartOptions = {
             width: '100%'
         },        
         is3D: true,
-        backgroundColor: '#F8F8F8 ',
         titleTextStyle: { textStyle: { fontName: 'Roboto', fontSize: 11, bold: false, italic: false } },
         tooltip: { textStyle: { fontName: 'Roboto', fontSize: 11, bold: false } },
         legend: { textStyle: { fontName: 'Roboto', fontSize: 11, bold: false } }
