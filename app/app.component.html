@@ -19,7 +19,7 @@
                         <li *ngIf="isLoggedIn()"><a (click)="submitLogout()">Logout</a></li>
                         <li *ngIf="!isLoggedIn()"><a [routerLink]="['/register']">Register</a></li>
                         <li *ngIf="!isLoggedIn()"><a [routerLink]="['/login']">Login</a></li>
-                        <li *ngIf="!isLoggedIn()"><a [routerLink]="['/glogin']">G-Login</a></li>
+                        <li *ngIf="!isLoggedIn()"><a [routerLink]="['/glogin']">Google Login</a></li>
                         </ul>
                     </div>
                 </div>
