@@ -41,13 +41,14 @@ export class RegisterComponent{
                 } else {
 
                     this.token = response.data.access_token;
-                    this.authService.isAuthenticated = true;
+                   
                     
                     if (this.token.length != 0) {
                         console.log("SUCCESS length:" + this.token.length);
                         localStorage.setItem("sms_access_token", this.token);
                         this.router.navigate(['/analytics']);
-                        this.isAuthenticated = true;                        
+                        this.isAuthenticated = true;   
+                         this.authService.isAuthenticated = true;
                     }
                    console.log('step2');
 
@@ -83,13 +84,14 @@ export class RegisterComponent{
                 } else {
 
                     this.token = response.data.access_token;
-                    this.authService.isAuthenticated = true;
+                   
                     
                     if (this.token.length != 0) {
                         console.log("SUCCESS length:" + this.token.length);
                         localStorage.setItem("sms_access_token", this.token);
                         this.router.navigate([callBackPath]);
                         this.isAuthenticated = true;
+                         this.authService.isAuthenticated = true;
                         return true;
                     }
 
