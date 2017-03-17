@@ -41,7 +41,8 @@ export class RegisterComponent{
                 } else {
 
                     this.token = response.data.access_token;
-
+                    this.authService.isAuthenticated = true;
+                    
                     if (this.token.length != 0) {
                         console.log("SUCCESS length:" + this.token.length);
                         localStorage.setItem("sms_access_token", this.token);
@@ -82,7 +83,8 @@ export class RegisterComponent{
                 } else {
 
                     this.token = response.data.access_token;
-
+                    this.authService.isAuthenticated = true;
+                    
                     if (this.token.length != 0) {
                         console.log("SUCCESS length:" + this.token.length);
                         localStorage.setItem("sms_access_token", this.token);
