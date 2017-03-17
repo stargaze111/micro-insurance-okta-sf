@@ -34,8 +34,6 @@ export class AppComponent {
         this.login = false;
     }
     isLoggedIn(){
-    console.log(' this.authService.isAuthenticated '+this.authService.isAuthenticated);
-    console.log(' this.gauthService.isAuthenticated '+this.gauthService.isAuthenticated);
         return this.authService.isAuthenticated||this.gauthService.isAuthenticated;
     }
 }
