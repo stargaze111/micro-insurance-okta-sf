@@ -13,7 +13,7 @@ export class SimulatorRandomQuoteComponent{
     public ages:string[ ] = ['18', '19', '20', '21','22', '23', '24', '25','26', '27', '28', '29','30', '31', '32', '33'];
     public firstNames:string[ ] = ['John', 'Jack', 'Tony', 'Peter','Kevin', 'Anthony', 'James', 'Shaun','Rick', 'Mark', 'Spike', 'Craig','Mickey', 'Ram', 'Jason', 'Andrew'];
     public lastNames:string[ ] = ['Smith', 'Reacher', 'Stark', 'Parker','Spacey', 'Hopkins', 'Ruse', 'Pollock','Roll', 'Spencer', 'Jones', 'Hatter','Mouse', 'Mendes', 'Bourne', 'Blake'];
-    public emails:string[ ] = ['js@js.js', 'jr@jr.jr', 'ts@ts.ts', 'pp@pp.pp','ks@ks.ks', 'ah@ah.ah', 'jr@jr.jr', 'sp@sp.sp','sr@sr.sr', 'sj@sj.sj', 'ch@ch.ch', 'mm@mm.mm','jm@jm.jm', 'bd@bd.bd', 'jb@jb.jb', 'ab@ab.ab', 'chaitanya.mokkapati@smsmt.com', 'chaitanya.mvnb@gmail.com'];
+    public emails:string[ ] = ['js@js.js', 'ivan.z.cai@gmail.com', 'ts@ts.ts', 'pp@pp.pp','ks@ks.ks', 'ah@ah.ah', 'jr@jr.jr', 'sp@sp.sp','sr@sr.sr', 'sj@sj.sj', 'ch@ch.ch', 'mm@mm.mm','jm@jm.jm', 'bd@bd.bd', 'jb@jb.jb', 'ab@ab.ab', 'chaitanya.mokkapati@smsmt.com', 'chaitanya.mvnb@gmail.com'];
     public mobiles:string[ ] = ['0426706255', '0426706255', '0426706255', '0426706255','0426706255', '0426706255', '0426706255', '0426706255','0426706255', '0426706255', '0426706255', '0426706255','0426706255', '0426706255', '0426706255', '0426706255'];
     public destinations:string[ ] = [
         '21 Regent St, Redfern', 
