@@ -157,7 +157,7 @@ export class AnalyticsComponent implements OnInit, OnChanges, OnDestroy {
     ]);
 
 pieChartOptions = {
-       
+        backgroundColor: '#F8F8F8',
         pieSliceText: 'percentage',
         pieSliceTextStyle:{alignment: 'center'},
         chartArea: {        
